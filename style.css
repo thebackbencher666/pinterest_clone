@@ -1,77 +1,88 @@
-*{
-    background-color: #ffffff;
-    padding: 0;
+/* General styles */
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
- .body{
-        background-color: #000000;
-        
- }
- .container{
-    color:#c90e0e;
-    margin: 20px;
+
+/* Dark Theme */
+body {
+    background: linear-gradient(135deg, #1a1a1a, #3a3a3a);
+    color: #fff;
+    text-align: center;
+}
+
+/* Container */
+.container {
     padding: 20px;
-    text-size-adjust: center;
-    font-family: cursive;
- }
-.container .home{
+}
+
+/* Home Button */
+.home button {
     position: fixed;
-    background-color: #c71414;
-    margin: 20px;
-    padding: 20px;  
     top: 20px;
     left: 20px;
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    color: white;
+    padding: 10px 20px;
     border-radius: 50px;
-    color: #df0909; 
-    justify-content: center;
-    display: flex;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
 }
 
-.container .home:hover {
-    /* Styles when hovering over the button */
-    background-color: rgb(10, 10, 10);
-  }
-  .container .search-bar{
-    position: fixed; 
-    padding: 10px;
-    margin: 10px;
-    border-radius: 50px;
-    right: 30%;
-    left: 20%;
-    top: 5%;
-    background-color: #989b7e52;
-  }
-  
+.home button:hover {
+    transform: scale(1.1);
+    background: linear-gradient(45deg, #ff4b2b, #ff416c);
+}
 
-  .container .image1{
+/* Search Bar */
+.search-bar {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
     padding: 10px;
-    margin: 10px;
-    width: 40%;
-    height: 40%;
-    border-radius: 50px;
-  }
-  .container .image2{
-    padding: 10px;
-    margin: 10px;
-    width: 40%;
-    height: 40%;
-    float: right;
-    border-radius: 50px;
-    
-  }
-  .container .image3{
-    padding: 10px;
-    margin: 10px;
-    width: 40%;
-    height: 40%;
-    border-radius: 50px;
-  }
-  .container .image4{
-    padding: 10px;
-    margin: 10px;
-    width: 40%;
-    height: 40%;
-    border-radius: 50px;
-    top: 50%;
-  }
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    width: 60%;
+    text-align: center;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    backdrop-filter: blur(5px);
+}
+
+/* Image Gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 50px;
+    margin-top: 50px;
+}
+
+.card {
+    overflow: hidden;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 20px;
+    transition: transform 0.3s;
+}
+
+/* Hover effect on images */
+.card:hover img {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
   
